@@ -40,6 +40,18 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
+
+  # RSpec 3:
+   config.backtrace_exclusion_patterns = [
+  # RSpec 2:
+  #config.backtrace_clean_patterns = [
+    /\/lib\d*\/ruby\//,
+    /bin\//,
+    /gems/,
+    /spec\/spec_helper\.rb/,
+    /lib\/rspec\/(core|expectations|matchers|mocks)/
+  ]
+
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin
